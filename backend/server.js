@@ -13,26 +13,31 @@ mongoose.connect("mongodb://localhost/docclone", {
 app.use(passport.initialize());
 
 app.post("/signup", (req, res) => {
-  // Handle user sign up
+  const { username, password } = req.body;
+  // Create a new user in the database with the provided username and password
 });
 
 app.post("/login", (req, res) => {
-  // Handle user login
+  const { username, password } = req.body;
+  // Check if the provided username and password match a user in the database
 });
 
 app.post("/document", (req, res) => {
-  // Handle document creation
+  const { content } = req.body;
+  // Create a new document in the database with the provided content
 });
 
 app.post("/share", (req, res) => {
-  // Handle link sharing
+  const { documentId } = req.body;
+  // Create a new link in the database that points to the specified document
 });
 
 const wss = new WebSocket.Server({ server: app });
 
 wss.on("connection", (ws) => {
   ws.on("message", (message) => {
-    // Handle operational transforms
+    // Apply the received operational transform to the specified document
+    // Broadcast the updated document to all connected clients
   });
 });
 
