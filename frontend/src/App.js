@@ -17,6 +17,8 @@ const App = () => {
     socket.on("document", (doc) => {
       setValue(doc);
     });
+    // Send operational transforms to the server when the document is edited
+    // Update the document state when an updated document is received from the server
     return () => {
       socket.disconnect();
     };
