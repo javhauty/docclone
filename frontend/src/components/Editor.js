@@ -13,7 +13,8 @@ const TextEditor = () => {
 
   useEffect(() => {
     // Setup websocket connection here
-    // Handle incoming and outgoing messages
+    // Send operational transforms to the server when the document is edited
+    // Update the document state when an updated document is received from the server
   }, []);
 
   return (
