@@ -1,0 +1,19 @@
+
+2. Navigate to the project directory:
+```
+cd docclone
+```
+
+3. Install the dependencies:
+```
+npm install
+```
+
+4. Set up the MongoDB database. Follow the instructions in the [official MongoDB installation guide](https://docs.mongodb.com/manual/installation/).
+
+5. Start the backend server:
+```
+node server.js
+```
+
+6. Start the frontend client:
